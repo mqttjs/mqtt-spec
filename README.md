@@ -4,6 +4,12 @@
 
 **mqtt broker specs as a module**
 
+## Usage
+
+```js
+require('mqtt-spec').registerMochaTests();
+```
+
 ## Contributing
 
 mqtt-spec is an **OPEN Open Source Project**. This means that:

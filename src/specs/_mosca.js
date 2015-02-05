@@ -1,11 +1,5 @@
-var expect = require('expect.js');
-var async = require('async');
-var mqtt = require('mqtt');
-
-var f = require('../support/factory');
-
-describe('Imported Mosca Tests', function(){
-  /*function maxInflightMessageTest(max, done) {
+/*describe('Imported Mosca Tests', function(){
+  function maxInflightMessageTest(max, done) {
     buildAndConnect(done, function (client) {
 
       var counter = max + 1;
@@ -253,5 +247,5 @@ describe('Imported Mosca Tests', function(){
         });
       }
     ], done);
-  });*/
-});
+  });
+});*/
