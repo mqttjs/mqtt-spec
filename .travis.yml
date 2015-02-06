@@ -10,4 +10,3 @@ before_install:
   - sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa -y
   - sudo apt-get update -q
   - sudo apt-get install mosquitto
-  - sleep 10
