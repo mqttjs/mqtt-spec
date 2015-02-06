@@ -39,6 +39,8 @@ module.exports = {
       });
     }
 
+    c.on('error', function(){});
+
     if(done) {
       c.stream.once('close', function(){
         setTimeout(done, 0);
@@ -55,6 +57,8 @@ module.exports = {
         protocolId: 'MQTT',
         protocolVersion: 4
       });
+
+      c.on('error', function(){});
 
       if(done) {
         c.once('close', function(){
