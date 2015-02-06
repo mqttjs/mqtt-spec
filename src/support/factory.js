@@ -33,13 +33,14 @@ module.exports = {
 
     var c = mqtt.connect('mqtt://' + this.host + ':' + this.port, options);
 
+    c.on('error', function(){});
+    c.stream.on('error', function(){});
+
     if(handler) {
       c.once('connect', function(){
         handler(c);
       });
     }
-
-    c.on('error', function(){});
 
     if(done) {
       c.stream.once('close', function(){
@@ -52,13 +53,13 @@ module.exports = {
   rawClient: function(handler, done) {
     var self = this;
     var c = net.createConnection(this.port, this.host, function(){
+      c.on('error', function(){});
+
       handler(mqttConn(c), {
         clientId: self.c(),
         protocolId: 'MQTT',
         protocolVersion: 4
       });
-
-      c.on('error', function(){});
 
       if(done) {
         c.once('close', function(){
