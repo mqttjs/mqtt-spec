@@ -1,7 +1,8 @@
 var spec = require('../index');
 
 spec.setup({
-  port: 5000
+  port: process.env['PORT'],
+  host: process.env['HOST']
 });
 
 spec.registerMochaTests();
