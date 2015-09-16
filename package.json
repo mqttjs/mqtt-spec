@@ -4,7 +4,7 @@
   "description": "mqtt broker specs as a module",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive --reporter list"
+    "test": "./node_modules/.bin/mocha --recursive --reporter list ./test"
   },
   "contributors": [
     "Joël Gähwiler <joel.gaehwiler@gmail.com> (https://github.com/256dpi)",
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/mqttjs/mqtt-spec",
   "dependencies": {
-    "underscore": "1.7.0",
     "async": "0.9.0",
     "expect.js": "0.3.1",
+    "mocha": "2.1.0",
     "mqtt": "1.0.5",
     "mqtt-connection": "2.1.1"
   }
